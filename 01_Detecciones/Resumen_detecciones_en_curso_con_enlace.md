@@ -1,3 +1,4 @@
+```
 #repo=detections (ExternalApiType=Event_EppDetectionSummaryEvent CustomerIdString=?cid) OR (ExternalApiType=Event_UserActivityAuditEvent Attributes.product="epp" OperationName=detection_update)
 | CompositeId := Attributes.composite_id
 | case{
@@ -45,3 +46,4 @@ Attributes.update_status!=closed | ResolvedTime:="";
 | "Status" :=rename(Attributes.update_status)
 | table([FirstDetect_readable, Hostname, Tactic, Technique, SeverityName, Status, Asignado, "Detection Link"], sortby=FirstDetect_readable, order=desc, limit=20000)
 | Status != closed
+```
