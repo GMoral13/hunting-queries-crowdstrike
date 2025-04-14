@@ -1,3 +1,4 @@
+```
 #repo=detections (ExternalApiType=Event_EppDetectionSummaryEvent CustomerIdString=?cid) OR (ExternalApiType=Event_UserActivityAuditEvent Attributes.product= "epp" OperationName=detection_update Attributes.update_status!=new)
 | case {
     ExternalApiType=Event_EppDetectionSummaryEvent
@@ -55,3 +56,4 @@
 | DetectDate_UTC_readable := formatTime("%FT%T%z", field=DetectDate)
 | LastUpdate_UTC_readable := formatTime("%FT%T%z", field=LastUpdate)
 | table([DetectDate, DetectDate_UTC_readable, LastUpdate, LastUpdate_UTC_readable,  Company, SeverityName, Objective, Tactic, Technique, PatternDispositionDescription, Name, Status, Resolution, Hostname, aid, UserName, ProductType, ParentProcessId, ProcessId, FileName, DetectDetails, MD5String, SHA256String, CompositeId, FalconHostLink], sortby=DetectDate, order=desc, limit=20000)
+```
