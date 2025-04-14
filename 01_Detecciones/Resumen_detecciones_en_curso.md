@@ -1,3 +1,4 @@
+```
 #repo=detections (ExternalApiType=Event_EppDetectionSummaryEvent CustomerIdString=?cid) OR (ExternalApiType=Event_UserActivityAuditEvent Attributes.product= "epp" OperationName=detection_update Attributes.update_status!=new)
 | case {
     ExternalApiType=Event_EppDetectionSummaryEvent
@@ -34,3 +35,4 @@
 | default(field=[PatternDispositionDescription, Name, CommandLine, LastUpdate], value="--", replaceEmpty=true)
 | table([DetectDate, Hostname, UserName, SeverityName, Status, Asignado, PatternDispositionDescription, Name], sortby=DetectDate, order=desc, limit=20000)
 | Status != closed
+```
