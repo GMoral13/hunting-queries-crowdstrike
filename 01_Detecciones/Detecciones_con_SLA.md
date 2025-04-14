@@ -1,3 +1,4 @@
+```
 #repo=detections (ExternalApiType=Event_EppDetectionSummaryEvent CustomerIdString=?cid) OR (ExternalApiType=Event_UserActivityAuditEvent Attributes.product="epp" OperationName=detection_update)
 | CompositeId := Attributes.composite_id
 | case{
@@ -41,3 +42,4 @@ Attributes.update_status!=closed | ResolvedTime:="";
 | format("[Detection Link](%s)", field=[FalconHostLink], as="Detection Link")
 | "Status" :=rename(Attributes.update_status)
 | table([Hostname, Tactic, Technique, SeverityName, Status, Aging, FirstDetect, FirstDetect_readable, FirstAssign, FirstAssign_readable, ResolvedTime, ResolvedTime_readable, ToAssign, AssignToClose, DetectToClose, Resolution, "Detection Link", CompositeId], sortby=Aging, order=desc, limit=20000)
+```
