@@ -10,3 +10,5 @@ El objetivo es contar con un conjunto estructurado y reutilizable de queries que
 * Refuerzo de detección en entornos productivos.
 * Apoyo a actividades de análisis durante incidentes.
 * Generación de hipótesis para ejercicios de hunting periódicos.
+
+### NOTA: Este repositorio incluye queries de otros repositorios que he podido tomar como referencia, así como queries propias desarrolladas para hacer hunting
