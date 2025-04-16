@@ -1,0 +1,6 @@
+Show me any instances of common reconnaissance tools on a host
+
+```
+#event_simpleName=ProcessRollup2 (FileName=net.exe OR FileName=ipconfig.exe OR FileName=whoami.exe OR FileName=quser.exe OR FileName=ping.exe OR FileName=netstat.exe OR FileName=tasklist.exe OR FileName=Hostname.exe OR FileName=at.exe)
+| groupBy([ComputerName, UserName, FileName, CommandLine])
+```
