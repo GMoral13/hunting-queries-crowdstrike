@@ -1,14 +1,14 @@
-Este repositorio recopila una colección organizada de consultas (CQL) diseñadas para facilitar tareas de Threat Hunting, investigación de incidentes y detección proactiva de actividades anómalas o maliciosas en entornos monitorizados con CrowdStrike Falcon.
+This repository contains an organized collection of queries (CQL) designed to facilitate Threat Hunting tasks, incident investigation, and proactive detection of anomalous or malicious activities in environments monitored with CrowdStrike Falcon.
 
-El objetivo es contar con un conjunto estructurado y reutilizable de queries que permitan:
-* Identificar comportamientos sospechosos.
-* Detectar técnicas de ataque conocidas y patrones de compromiso.
-* Apoyar procesos de respuesta ante incidentes y análisis forense.
-* Facilitar la caza proactiva frente a nuevas amenazas.
+The goal is to maintain a structured and reusable set of queries that allow you to:
+* Identify suspicious behaviors.
+* Detect known attack techniques and compromise patterns.
+* Support incident response and forensic analysis processes.
+* Facilitate proactive hunting for emerging threats.
 
-💡 Uso recomendado:
-* Refuerzo de detección en entornos productivos.
-* Apoyo a actividades de análisis durante incidentes.
-* Generación de hipótesis para ejercicios de hunting periódicos.
+💡 Recommended Use:
+* Detection enhancement in production environments.
+* Support for analysis activities during incidents.
+* Hypothesis generation for periodic hunting exercises.
 
-### NOTA: Este repositorio incluye queries de otros repositorios que he podido tomar como referencia, así como queries propias desarrolladas para hacer hunting
+### NOTE: This repository includes queries from other public repositories I have used as a reference, as well as custom queries developed for hunting purposes.
