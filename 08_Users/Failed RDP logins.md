@@ -6,7 +6,7 @@ Logins fallidos por RDP
 | groupBy([RemoteAddressIP4, UserName], limit=max)
 | ipLocation(RemoteAddressIP4)
 | asn(RemoteAddressIP4)
-| rdns(RemoteAddressIP4)
+| reverseDns(RemoteAddressIP4)
 | default(value="-", field=[RemoteAddressIP4.asn, RemoteAddressIP4.city, RemoteAddressIP4.country, RemoteAddressIP4.state, RemoteAddressIP4.org, hostname])
 | groupBy([RemoteAddressIP4, UserName, hostname, _count, RemoteAddressIP4.asn, RemoteAddressIP4.org, RemoteAddressIP4.country, RemoteAddressIP4.state, RemoteAddressIP4.city], function=[], limit=max)
 ```
